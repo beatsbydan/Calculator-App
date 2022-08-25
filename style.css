@@ -21,6 +21,7 @@
     --texts: hsl(221, 14%, 31%);
     --textss:#FFFFFF;
     --textsss:#FFFFFF;
+    --textssss: #ffffffc2;
 }
 .theme__2{
     /*Theme 2
@@ -38,6 +39,7 @@
     /*Text*/
     --texts: hsl(60, 10%, 19%);
     --textss: hsl(60, 10%, 19%);
+    --textssss:hsla(60, 10%, 19%, 0.74);
 }
 
 .theme__3{
@@ -57,6 +59,7 @@
     --texts: hsl(52, 100%, 62%);
     --textss: hsl(52, 100%, 62%);
     --textsss: hsl(198, 20%, 13%);
+    --textssss:hsla(52, 100%, 62%, 0.74);
 }
 
 html, body{
@@ -134,6 +137,7 @@ nav{
 button{
     cursor: pointer;
     border: none;
+    word-break: break-all;
     border-radius: 5px;
 }
 /*main styling*/
@@ -142,9 +146,26 @@ main{
 }
 .display__screen{
     width:100%;
+    min-height: 100px;
+    padding: 10px 5%;
     background-color:var(--screen-background);
-    height:100px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.result__preview{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--textssss);
+}
+.current--result__output{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--textss);
 }
 .button__grid{
     width: 100%;
