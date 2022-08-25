@@ -12,8 +12,10 @@
     --screen-background: hsl(224, 36%, 15%);
     /*keys*/
     --key-background: hsl(225, 21%, 49%);
+    --hover-2: hsl(225, 59%, 77%);
     --key-shadow: hsl(224, 28%, 35%);
     --submit-key-and-toggle: hsl(6, 63%, 50%);
+    --hover-1: hsl(6, 96%, 71%);
     --submit-key-shadow: hsl(6, 70%, 34%);
     --functions: hsl(30, 25%, 89%);
     --functions-shadow: hsl(28, 16%, 65%);
@@ -21,6 +23,7 @@
     --texts: hsl(221, 14%, 31%);
     --textss:#FFFFFF;
     --textsss:#FFFFFF;
+    --hover-3:#FFFFFF;
     --textssss: #ffffffc2;
 }
 .theme__2{
@@ -31,10 +34,13 @@
     --screen-background: hsl(0, 0%, 93%);
     /*Keys*/
     --key-background: hsl(185, 42%, 37%);
+    --hover-2: hsl(185, 65%, 67%);
     --key-shadow: hsl(185, 58%, 25%);
     --submit-key-and-toggle: hsl(25, 98%, 40%);
+    --hover-1: hsl(25, 72%, 65%);
     --submit-key-shadow: hsl(25, 99%, 27%);
     --functions: hsl(45, 7%, 89%);
+    --hover-3: white;
     --functions-shadow: hsl(35, 11%, 61%);
     /*Text*/
     --texts: hsl(60, 10%, 19%);
@@ -50,8 +56,11 @@
     --screen-background:hsl(268, 71%, 12%);
     /*Keys*/
     --key-background: hsl(281, 89%, 26%);
+    --hover-3: hsla(285, 81%, 26%, 0.658);
     --key-shadow: hsl(285, 91%, 52%);
+    --hover-2: hsl(285, 64%, 42%);
     --submit-key-and-toggle: hsl(176, 100%, 44%);
+    --hover-1: hsl(176, 83%, 72%);
     --submit-key-shadow: hsl(177, 92%, 70%);
     --functions: hsl(268, 47%, 21%);
     --functions-shadow: hsl(290, 70%, 36%);
@@ -133,6 +142,10 @@ nav{
     width: 15px;
     height: 15px;
     border-radius: 30px;
+    cursor: pointer;
+}
+.current__theme:hover{
+    background-color:var(--hover-1) ;
 }
 button{
     cursor: pointer;
@@ -191,10 +204,16 @@ main{
     color: var(--texts);
     box-shadow: 0px 5px var(--functions-shadow);
 }
+.function:hover{
+    background-color: var(--hover-3);
+}
 .edit{
     background-color: var(--key-background);
     color: White;
     box-shadow:0px 5px var(--key-shadow) ;
+}
+.edit:hover{
+    background-color: var(--hover-2);
 }
 .function,.grid .edit {
     width: 22%;
@@ -210,6 +229,9 @@ main{
     color:var(--textsss);
     font-size: 2rem;
     box-shadow: 0px 5px var(--submit-key-shadow);
+}
+.submit:hover{
+    background-color: var(--hover-1);
 }
 .result__grid button{
     width:48%;
