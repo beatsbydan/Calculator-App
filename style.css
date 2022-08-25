@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    /*Theme 1
+    Backgrounds*/
+    --theme-background: hsl(222, 26%, 31%);
+    --toggle-and-keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    /*keys*/
+    --key-background: hsl(225, 21%, 49%);
+    --key-shadow: hsl(224, 28%, 35%);
+    --submit-key-and-toggle: hsl(6, 63%, 50%);
+    --submit-key-shadow: hsl(6, 70%, 34%);
+    --functions: hsl(30, 25%, 89%);
+    --functions-shadow: hsl(28, 16%, 65%);
+    /*texts*/
+    --texts: hsl(221, 14%, 31%);
+    --textss:#FFFFFF;
+    --textsss:#FFFFFF;
+}
+.theme__2{
+    /*Theme 2
+    Backgrounds*/
+    --theme-background: hsl(0, 0%, 90%);
+    --toggle-and-keypad-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    /*Keys*/
+    --key-background: hsl(185, 42%, 37%);
+    --key-shadow: hsl(185, 58%, 25%);
+    --submit-key-and-toggle: hsl(25, 98%, 40%);
+    --submit-key-shadow: hsl(25, 99%, 27%);
+    --functions: hsl(45, 7%, 89%);
+    --functions-shadow: hsl(35, 11%, 61%);
+    /*Text*/
+    --texts: hsl(60, 10%, 19%);
+    --textss: hsl(60, 10%, 19%);
+}
+
+.theme__3{
+    /*Theme 3
+    Backgrounds*/
+    --theme-background: hsl(268, 75%, 9%);
+    --toggle-and-keypad-background: hsl(268, 71%, 12%);
+    --screen-background:hsl(268, 71%, 12%);
+    /*Keys*/
+    --key-background: hsl(281, 89%, 26%);
+    --key-shadow: hsl(285, 91%, 52%);
+    --submit-key-and-toggle: hsl(176, 100%, 44%);
+    --submit-key-shadow: hsl(177, 92%, 70%);
+    --functions: hsl(268, 47%, 21%);
+    --functions-shadow: hsl(290, 70%, 36%);
+    /**Text*/
+    --texts: hsl(52, 100%, 62%);
+    --textss: hsl(52, 100%, 62%);
+    --textsss: hsl(198, 20%, 13%);
+}
+
+html, body{
+    font-family:'League Spartan' ;
+}
+body{
+    transition:all 300ms ease-in-out;
+    background-color: var(--theme-background) ;
+}
+
+/*Calculator app styling start*/
+.calculator__app{
+    width:88%;
+    max-width:400px ;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position:absolute;
+    margin:auto;
+}
+h1{
+    font-size: 2.5rem;
+    color: var(--textss);
+}
+nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.theme__section{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.theme__section p{
+    font-weight: 700;
+    color: var(--textss);
+}
+.theme__container{
+    width: inherit;
+}
+.numbers{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.numbers p{
+    cursor: pointer;
+}
+.theme__navigator{
+    background-color: var(--toggle-and-keypad-background);
+    width:100%;
+    height: 28px;
+    padding: 3px 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+}
+.current__theme{
+    background-color: var(--submit-key-and-toggle);
+    position:relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+}
+button{
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+/*main styling*/
+main{
+    margin-top: 30px;
+}
+.display__screen{
+    width:100%;
+    background-color:var(--screen-background);
+    height:100px;
+    border-radius: 8px;
+}
+.button__grid{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 8px;
+    background-color: var(--toggle-and-keypad-background);
+}
+.grid, .result__grid{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.function{
+    background-color: var(--functions);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--texts);
+    box-shadow: 0px 5px var(--functions-shadow);
+}
+.edit{
+    background-color: var(--key-background);
+    color: White;
+    box-shadow:0px 5px var(--key-shadow) ;
+}
+.function,.grid .edit {
+    width: 22%;
+    height: 3.7rem;
+    max-height: 70px;
+}
+.edit{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.submit{
+    background-color: var(--submit-key-and-toggle);
+    color:var(--textsss);
+    font-size: 2rem;
+    box-shadow: 0px 5px var(--submit-key-shadow);
+}
+.result__grid button{
+    width:48%;
+    height: 3.7rem;
+    max-height: 70px;
+}
+/*Calculator-app styling end*/

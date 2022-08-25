@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+  <body>
+    <div class="calculator__app">
+      <header>
+        <nav>
+          <h1>calc</h1>
+          <section class="theme__section">
+            <p>THEME</p>
+            <div class="theme__container">
+              <div class="numbers">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+              </div>
+              <div class="theme__navigator">
+                <div class="theme--button current__theme"></div>
+                <div class="theme--button"></div>
+                <div class="theme--button"></div>
+              </div>
+            </div>
+          </section>
+        </nav>
+      </header>
+      <main>
+        <section class="display__screen">
+          <div class="result__preview"></div>
+          <div class="current--result__output"></div>
+        </section>
+        <section class="button__grid">
+          <div class="grid">
+            <button class="function">7</button>
+            <button class="function">8</button>
+            <button class="function">9</button>
+            <button class="edit">DEL</button>
+          </div>
+          <div class="grid">
+            <button class="function">4</button>
+            <button class="function">5</button>
+            <button class="function">6</button>
+            <button class="function">+</button>
+          </div>
+          <div class="grid">
+            <button class="function">1</button>
+            <button class="function">2</button>
+            <button class="function">3</button>
+            <button class="function">-</button>
+          </div>
+          <div class="grid">
+            <button class="function">.</button>
+            <button class="function">0</button>
+            <button class="function">/</button>
+            <button class="function">x</button>
+          </div>
+          <div class="result__grid">
+            <button class="edit">RESET</button>
+            <button class="submit">=</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
