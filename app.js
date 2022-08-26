@@ -56,7 +56,7 @@ class Calculator{
     clear(){
         //previous operand becomes null
         this.prevOperand = ''
-        //current operand becomes null
+        //current operand becomes 0. Default screen output
         this.currentOperand = 0;
         //operation becomes undefined / empty
         this.operation = undefined
@@ -65,6 +65,7 @@ class Calculator{
     erase(){
         //converting the current operand to a string and looping through to delete the string value at the very end of the string set. Basically, this stores the entire string minus the last string value.
         this.currentOperand = this.currentOperand.toString()./*cuts off the position not selected*/slice(0/*beginning of the string value*/, /*second to the last string value*/ -1)
+        //default screen output
         if(this.currentOperand === ""){
             this.currentOperand = 0;
         }
@@ -193,7 +194,10 @@ const eraseBtn = document.querySelector('[data-erase]')
 const previewScreen = document.querySelector('[data-result__preview]')
 const resultScreen = document.querySelector('[data-current--result__output]')
 
+//default screen output
 resultScreen.innerHTML = 0;
+
+
 //referring/defining to the class
 const calculator = new Calculator(previewScreen, resultScreen)
 
