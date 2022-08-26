@@ -57,14 +57,17 @@ class Calculator{
         //previous operand becomes null
         this.prevOperand = ''
         //current operand becomes null
-        this.currentOperand = ''
+        this.currentOperand = 0;
         //operation becomes undefined / empty
         this.operation = undefined
     }
     //function to erase digit(s)
     erase(){
         //converting the current operand to a string and looping through to delete the string value at the very end of the string set. Basically, this stores the entire string minus the last string value.
-        this.currentOperand =this.currentOperand.toString()./*cuts off the position not selected*/slice(0/*beginning of the string value*/, /*second to the last string value*/ -1)
+        this.currentOperand = this.currentOperand.toString()./*cuts off the position not selected*/slice(0/*beginning of the string value*/, /*second to the last string value*/ -1)
+        if(this.currentOperand === ""){
+            this.currentOperand = 0;
+        }
     }
     //function to append a number to the screen
     appendNumber(number){
@@ -190,6 +193,7 @@ const eraseBtn = document.querySelector('[data-erase]')
 const previewScreen = document.querySelector('[data-result__preview]')
 const resultScreen = document.querySelector('[data-current--result__output]')
 
+resultScreen.innerHTML = 0;
 //referring/defining to the class
 const calculator = new Calculator(previewScreen, resultScreen)
 
