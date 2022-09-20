@@ -95,7 +95,7 @@ class Calculator{
         //setting operation
         this.operation = operation
         //equating both operands to indecate that we're done with the first set of digits to be operated on
-        this.prevOperand = this.currentOperand;
+    this.prevOperand = this.currentOperand;
         //clearing the current Operand / result screen when an operator is added
         this.currentOperand = ''
     }
